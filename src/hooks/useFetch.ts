@@ -10,6 +10,7 @@ const useFetch = (url, mapCountriesDataAsRequired) => {
     setIsFetching(true);
     const countriesData = await fetch(url, {
       method: "GET",
+      mode: "no-cors",
       headers: {
         "access-control-allow-origin": "*",
         "Content-type": "application/json; charset=UTF-8",
